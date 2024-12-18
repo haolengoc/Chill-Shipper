@@ -8,7 +8,7 @@ from random import randint
 class Menu:
     def __init__(self, display_surface):
         self.display_surface = display_surface
-        self.font = pygame.font.Font('fonts/pixel_font.ttf', 55)  # Font mặc định, bạn có thể thay đổi
+        self.font = pygame.font.Font('fonts/pixel_font.ttf', 55)  
         self.bg_image =  pygame.image.load('images/bg2.png')
         self.text_color = (255, 255, 255)  # Màu chữ
         self.buttons = {
@@ -135,7 +135,7 @@ class Game:
         for house_rect in self.house_rects:
             if house_rect.colliderect(player_rect):
                 self.audio['music'].stop()
-                self.audio['victory'].play()  # (Tùy chọn) thêm âm thanh nếu muốn
+                self.audio['victory'].play()
                 self.show_victory_screen()
                 self.restart_game()
                 
